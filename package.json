@@ -12,8 +12,10 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "koa": "^2.6.2",
     "element-ui": "^2.4.11",
+    "koa": "^2.6.2",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
