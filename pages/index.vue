@@ -1,73 +1,209 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        libra_blog
-      </h1>
-      <h2 class="subtitle">
-        My premium Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="homePage">
+    <nav-header></nav-header>
+    <div class="home-bg">
+      <!-- <mark-down></mark-down> -->
+      <div class="introduce">
+        <div class="main">
+          HI, I AM LIBRA
+          <br />WELCOME
+        </div>
+        <div class="detail">hope you can find what you want</div>
       </div>
+    </div>
+    <div class="new-book">
+      <span class="title">新书推荐</span>
+      <ul class="book-list">
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+      </ul>
+    </div>
+    <div class="new-blog">
+      <span class="title">近期文章</span>
+      <ul class="blog-list">
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+        <li>
+          <blog-card></blog-card>
+        </li>
+      </ul>
+    </div>
+    <div class="hot-book">
+      <span class="title">热门书籍</span>
+      <ul class="book-list">
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+        <li>
+          <book :bookData="bookData"></book>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
+import navHeader from "@/components/nav-header";
+import book from "@/components/book";
+import blogCard from "@/components/blog-card";
 export default {
-  layout: 'nav',
+  data() {
+    return {
+      bookData: {
+        name: "libra",
+        author: "Libra",
+        describe: "dlkjfsldjfsldkjflsdkjf"
+      }
+    };
+  },
   components: {
-    Logo
+    navHeader,
+    book,
+    blogCard
   }
-}
+};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+<style lang="less">
+@import "./index.less";
 </style>

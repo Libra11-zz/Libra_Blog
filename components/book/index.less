@@ -1,0 +1,51 @@
+body {
+  padding: 20px;
+}
+figure.thumb {
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.thumb h2,
+.thumb p {
+  margin: 0;
+  text-align: center;
+}
+
+.thumb h2 {
+  font-weight: 700;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+.thumb .author {
+  font-size: 14px;
+  margin-top: 5px;
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 400;
+}
+
+.cover {
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 10px 20px -8px;
+}
+
+.cover:after {
+  content: '';
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.25), 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.cover img {
+  width: 144.56px;
+  height: 220px;
+  display: block;
+  position: relative;
+}
