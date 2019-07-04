@@ -1,0 +1,69 @@
+.register-page {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#2ad4e9, #5fd9ad);
+}
+.container {
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    padding-top: 140px;
+  }
+}
+.container * {
+  border-radius: 6px;
+}
+.register-form {
+  background: #ffffff;
+  color: #565656;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding: 40px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0px;
+    background: transparent;
+    padding: 40px 15px;
+  }
+}
+
+.register-form .register-title {
+  font-size: 38px;
+  font-weight: 300;
+  margin: 0px 0px 45px 0px;
+}
+
+.register-form .register-input {
+  font-family: 'Libra';
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #e7e7e7;
+  background: #fcfcfc;
+  transition: all 0.5s;
+  outline: none;
+  &:focus {
+    border: 2px solid #0097ff;
+    transition: all 0.5s;
+  }
+}
+
+.register-form .register-input.button {
+  border: none;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, #de48b5 0%, #0097ff 100%);
+}
+
+.register-signup {
+  color: #fff;
+  margin: 10px 0px;
+}
+
+.register-signup a {
+  color: #fff;
+  font-weight: 600;
+}
