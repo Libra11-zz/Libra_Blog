@@ -1,27 +1,21 @@
 <template>
   <div class="blog-card">
-    <div class="blog-card-top"></div>
-    <div class="blog-card-avatar">
-      <img src="https://pic.qqtn.com/up/2018-5/15252271245423063.jpg" alt />
-    </div>
-    <div class="blog-card-bottom">
-      <div class="about">
-        <span class="author">Libra</span>
+    <header class="card-header">
+      <span class="title">博客</span>
+      <span class="time">2019.3.25</span>
+      <h2 class="caption">2019如何学习HTML与CSS?</h2>
+    </header>
+    <div class="card-bottom">
+      <div class="avatar">
+        <img src="https://pic2.zhimg.com/v2-64e18f0800a839a13ca63ab828c2f477_1200x500.jpg" alt="">
       </div>
-      <div class="blog-card-title">dfdfsdfsdfsdf</div>
-      <div class="blog-card-content">是快乐的发咯法律上肯定会发生芬兰收到了路上看到法律上的房间数量费时费力书法家</div>
-      <div class="blog-card-detail">
-        <span class="date">
-          <i class="iconfont iconshizhong"></i>2019.12.29
-        </span>
-        <span class="view">
-          <i class="iconfont iconyanjing"></i>1000
-        </span>
-        <span class="love">
-          <i class="iconfont iconxin"></i>100
-        </span>
+      <div class="author">
+        <span class="title">作者</span>
+        <span class="author-name">Libra</span>
       </div>
     </div>
+    <a class='read-button'>阅读</a>
+  </div>
   </div>
 </template>
 

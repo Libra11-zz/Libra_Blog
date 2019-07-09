@@ -1,30 +1,53 @@
 .login-page {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#2ad4e9, #5fd9ad);
+  background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat fixed;
+
+  @media screen and (min-width: 768px) {
+    background: none;
+    background: linear-gradient(#2ad4e9, #5fd9ad);
+
+  }
+
+  .login-page-container {
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 57, 101, .9);
+  }
 }
+
 .container {
   max-width: 450px;
   margin: 0 auto;
   text-align: center;
+
   @media screen and (min-width: 768px) {
     padding-top: 140px;
   }
 }
-.container * {
-  border-radius: 6px;
-}
-.login-form {
-  background: #ffffff;
-  color: #565656;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  padding: 40px;
+
+.login-form-container {
+  background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat fixed;
+  background-size: cover;
+
   @media screen and (max-width: 768px) {
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0px;
     background: transparent;
-    padding: 40px 15px;
+  }
+
+  .login-form {
+    background: #ffffff;
+    color: #565656;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 40px;
+    background: rgba(40, 57, 101, .9);
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      box-shadow: none;
+      background: transparent;
+      border-radius: 0;
+      padding: 40px 15px;
+    }
   }
 }
 
@@ -32,42 +55,29 @@
   font-size: 38px;
   font-weight: 300;
   margin: 0px 0px 45px 0px;
+  color: #aaa;
+  text-shadow: 1px 1px 1px #565656;
 }
 
 .login-form .login-input {
-  font-family: 'Libra';
-  display: block;
-  margin: 20px auto;
-  width: 100%;
-  padding: 15px;
-  font-size: 18px;
-  border: 2px solid #e7e7e7;
-  background: #fcfcfc;
-  transition: all 0.5s;
-  outline: none;
+  margin-bottom: 20px;
+
   &:focus {
     border: 2px solid #0097ff;
     transition: all 0.5s;
   }
 }
 
-.login-form .login-input.button {
-  border: none;
-  color: white;
-  cursor: pointer;
+.el-button {
   background: linear-gradient(to right, #de48b5 0%, #0097ff 100%);
-}
-
-.login-forgot {
-  text-decoration: underline;
-  font-size: 14px;
-  color: white;
-  cursor: pointer;
+  color: #fff;
+  width: 100%;
+  border: none;
 }
 
 .login-signup {
   color: #fff;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 .login-signup a {

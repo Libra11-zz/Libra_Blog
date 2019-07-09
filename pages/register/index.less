@@ -1,30 +1,54 @@
 .register-page {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(#2ad4e9, #5fd9ad);
+  background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat fixed;
+  background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    background: none;
+    background: linear-gradient(#2ad4e9, #5fd9ad);
+
+  }
+
+  .register-page-container {
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 57, 101, .9);
+  }
 }
+
 .container {
   max-width: 450px;
   margin: 0 auto;
   text-align: center;
+
   @media screen and (min-width: 768px) {
     padding-top: 140px;
   }
 }
-.container * {
-  border-radius: 6px;
-}
-.register-form {
-  background: #ffffff;
-  color: #565656;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  padding: 40px;
+
+.register-form-container {
+  background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat fixed;
+  background-size: cover;
+
   @media screen and (max-width: 768px) {
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0px;
     background: transparent;
-    padding: 40px 15px;
+  }
+
+  .register-form {
+    background: #ffffff;
+    color: #565656;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    padding: 40px;
+    background: rgba(40, 57, 101, .9);
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      box-shadow: none;
+      background: transparent;
+      border-radius: 0;
+      padding: 40px 15px;
+    }
   }
 }
 
@@ -38,17 +62,20 @@
 
 .register-form .register-input {
   margin-bottom: 20px;
+
   &:focus {
     border: 2px solid #0097ff;
     transition: all 0.5s;
   }
 }
+
 .el-button {
   background: linear-gradient(to right, #de48b5 0%, #0097ff 100%);
   color: #fff;
   width: 100%;
   border: none;
 }
+
 .register-signup {
   color: #fff;
   margin: 10px 0px;

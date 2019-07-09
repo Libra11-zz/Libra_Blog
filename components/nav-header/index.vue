@@ -86,6 +86,26 @@ export default {
       isMobileMenuShow: false
     };
   },
+  mounted() {
+    window.addEventListener('scroll',function(){       
+      var scrollheight = document.body.scrollTop === 0 ? document.documentElement.scrollTop : document.body.scrollTop;
+      var root = document.querySelector('.nav-header')
+      var a = document.querySelectorAll('.directory a')
+      if(scrollheight > 100) {
+        root.style.background = 'rgba(40, 57, 101, .9)'
+        for (const item of a) {
+          item.style.color = '#fff'
+        }
+        root.style.transition = 'all 0.2s'
+      } else {
+        for (const item of a) {
+          item.style.color = '#565656'
+        }
+        root.style.backgroundColor = 'transparent'
+        root.style.transition = 'all 0.2s'
+      }
+    },false);
+  },
   methods: {
     showMobileMenu() {
       if (!this.isMobileMenuShow) {

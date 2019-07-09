@@ -2,9 +2,10 @@
   @media (max-width: 992px) {
     height: 60px;
   }
+
   height: 80px;
   width: 100%;
-  background-color: rgba(8, 8, 8, 0.3);
+  // background-color: rgba(8, 8, 8, 0.3);
   padding: 0 20px;
   position: fixed;
   top: 0;
@@ -12,16 +13,19 @@
   z-index: 9999;
   display: flex;
   align-items: center;
+
   .left {
     display: flex;
     flex: 1;
     align-items: center;
+
     .logo {
       display: flex;
       align-items: center;
       height: 100%;
       cursor: pointer;
       position: relative;
+
       &::before {
         transition: all 0.5s;
         content: '';
@@ -30,8 +34,9 @@
         left: 40px;
         height: 2px;
         width: 0;
-        background: linear-gradient(to right, #ff8a00, #da1b60);
+        background: linear-gradient(to right, #ff8a00, hsl(338, 78%, 48%));
       }
+
       &:hover {
         &::before {
           transition: all 0.5s;
@@ -44,6 +49,7 @@
           background: linear-gradient(to right, #ff8a00, #da1b60);
         }
       }
+
       .icontianchengzuo {
         font-size: 50px;
         padding: 0 15px;
@@ -53,22 +59,26 @@
         box-decoration-break: clone;
       }
     }
+
     .directory {
       display: flex;
       align-items: center;
       height: 100%;
+
       @media (max-width: 992px) {
         display: none;
       }
+
       a {
         text-align: center;
         position: relative;
         display: flex;
         flex-direction: column;
         width: 100px;
-        color: #ddd;
+        color: #565656;
         padding: 16px 0;
         transition: all 0.5s;
+
         &::before {
           transition: all 0.5s;
           content: '';
@@ -79,12 +89,14 @@
           width: 0;
           background: linear-gradient(to right, #ff8a00, #da1b60);
         }
+
         &:hover {
           background: linear-gradient(to right, #ff8a00, #da1b60);
           background-clip: text;
           -webkit-text-fill-color: transparent;
           box-decoration-break: clone;
           transition: all 0.5s;
+
           &::before {
             content: '';
             position: absolute;
@@ -95,50 +107,60 @@
             background: linear-gradient(to right, #ff8a00, #da1b60);
           }
         }
+
         i {
           font-size: 24px;
         }
       }
     }
   }
+
   .right {
     display: flex;
     align-items: center;
     flex: 1;
     flex-direction: row-reverse;
+
     .search {
       position: relative;
       float: right;
+
       @media (max-width: 992px) {
         display: none;
       }
+
       .search-input {
         background: transparent;
-        border: 1px solid #ddd;
+        border: 1px solid #fff;
         border-radius: 3px;
         color: #ff8a00;
         outline: none;
         padding: 8px 30px 8px 10px;
         transition: all 0.5s;
+
         &:hover {
           border: 1px solid #ff8a00;
         }
       }
+
       .iconsearch {
         position: absolute;
-        top: 10px;
+        top: 12px;
         right: 10px;
         color: #ddd;
         cursor: pointer;
         transition: all 0.5s;
+
         &:hover {
           color: #da1b60;
         }
       }
     }
+
     .personal {
       display: flex;
       position: relative;
+
       .avatar {
         width: 50px;
         height: 50px;
@@ -148,14 +170,17 @@
         cursor: pointer;
         margin: 0 40px 0 80px;
         transition: all 0.5s;
+
         &:hover {
           transition: all 0.5s;
           border: 2px solid #da1b60;
         }
+
         img {
           width: 100%;
           height: 100%;
         }
+
         @media (min-width: 992px) {
           &::before {
             transition: all 0.5s;
@@ -167,8 +192,10 @@
             width: 0;
             background: linear-gradient(to right, #ff8a00, #da1b60);
           }
+
           &:hover {
             transition: all 0.5s;
+
             &::before {
               content: '';
               position: absolute;
@@ -178,11 +205,13 @@
               width: 104px;
               background: linear-gradient(to right, #ff8a00, #da1b60);
             }
+
             &:hover .personal-info {
               opacity: 1;
               transition: all 0.5s;
             }
           }
+
           .personal-info {
             transition: all 0.5s;
             position: absolute;
@@ -194,11 +223,14 @@
             padding-bottom: 10px;
             border-bottom-left-radius: 3px;
             border-bottom-right-radius: 3px;
+
             li {
               padding: 10px 10px 10px 20px;
+
               &:hover {
                 background-color: rgba(8, 8, 8, 0.3);
               }
+
               a {
                 color: #333;
               }
@@ -207,10 +239,12 @@
         }
       }
     }
+
     .mobile-nav {
       @media (min-width: 992px) {
         display: none;
       }
+
       .nav-logo {
         .iconnav {
           padding: 3px 5px;
@@ -222,10 +256,12 @@
       }
     }
   }
+
   .mobile-menu {
     @media (min-width: 992px) {
       display: none;
     }
+
     position: absolute;
     top: 60px;
     left: 0;
@@ -236,8 +272,10 @@
     border-top: 1px solid #ddd;
     padding: 10px 0;
     transition: all 0.5s;
+
     li {
       padding: 10px 20px 10px 20px;
+
       a {
         color: #ddd;
       }
